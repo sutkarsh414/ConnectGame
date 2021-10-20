@@ -76,7 +76,6 @@ function changeColor(e){
                 if (horizontalCheck()|| verticalCheck() || diagonalCheck() || diagonalCheck2()){
                     playerTurn.textContent = `${player1} WINS!!`;
                     playerTurn.style.color = player1Color;
-                    return alert(`${player1} WINS!!`);
                 }else{
                     playerTurn.textContent = `Hey ${player2} it's your turn`
                     return currentPlayer = 2;
@@ -86,7 +85,6 @@ function changeColor(e){
                 if (horizontalCheck()|| verticalCheck() || diagonalCheck() || diagonalCheck2()){
                     playerTurn.textContent = `${player2} WINS!!`;
                     playerTurn.style.color = player2Color;
-                    return alert(`${player2} WINS!!`);
                 }else{
                     playerTurn.textContent = `Hey ${player1} it's your turn`;
                     return currentPlayer = 1;
