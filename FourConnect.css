@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy';
+    text-align: center;
+    margin-top: 0.5rem;
+   
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+a{
+    position: absolute;
+    top:6rem;
+    font-size: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+
+
+body {
+    background-image: url("https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg");
+    background-repeat: no-repeat;
+    background-size: 1550px 700px;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 383px;
+    height: 340px;
+    top: 9rem;
+    background-image: url("https://image.freepik.com/free-vector/abstract-banner-background-with-red-shapes_1361-3348.jpg");
+    border: 2px solid black;
+    padding: .5rem;
+
+
+}
+
+.container table tr td{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color:yellow;
+    cursor: pointer;
+}
+
+.reset{
+    position: absolute;
+    top:24rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 0.2rem;
+    border: 1px solid black;
+    background:#ffff;
+    cursor: pointer;
+    transition: .5s;
+    font-family: system-ui;
+    font-weight: 600;
+}
+
+.reset:hover{
+transition: 0.2s;
+box-shadow: 0px 0px #888888;
+background-color: #3699ff;
+color: #ffff;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 80%;
+        height: 350px;
+        top: 9rem;
+        border: 2px solid black;
+        padding: .5rem;
+    
+    }
+    
+}
+
+
+/* Animation for heading */
+
+.animate-charcter
+{
+    font-size: 50px !important;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 190px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
