@@ -20,12 +20,13 @@ while (!player2){
 };
 var player2Color = 'black';
 
-// var RowLen = prompt('Please enter number of rows');
-// var ColLen = prompt('Please enter number of column');
+var RowLen = prompt('Please enter number of rows');
+var ColLen = prompt('Please enter number of column');
+var Pieces = prompt('Please enter number of pieces');
 
-var RowLen = 5;
-var ColLen = 5;
-var Pieces = 4;
+$('h1').append('Connect '+Pieces);
+
+
 
 
 $(document).ready(function(){
@@ -186,8 +187,8 @@ function verticalCheck(){
 
 //Diagonally check for color match
 function diagonalCheck(){
-    var r = ColLen;
-    var c = RowLen;
+    var r = RowLen;
+    var c = ColLen;
     for(let col = 0; col < c; col++){
         var x = col;
         ColorArray = [];
@@ -206,14 +207,20 @@ function diagonalCheck(){
 
 //Diagonally check for color match
 function diagonalCheck2(){
+    var a = 0;
     for(let col = 0; col < ColLen; col++){
         var x = col;
         ColorArray = [];
-        for (let row = RowLen; row = 0; row--){
+        for (let row = RowLen-1; row >= a; row--){
+            console.log(row,x)
             ColorArray.push(tableRow[row].children[x].style.backgroundColor)
-            x+=1;
+            x += 1;
         }
+        a+=1;
+        flag = colorMatchCheck(ColorArray);
+        if(flag == true){break}
     }
+    return flag;
 }
 
 const AssigEventToResetBtn=async () =>{
